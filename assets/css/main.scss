@@ -1,0 +1,135 @@
+---
+---
+@import 'code', 'syntax';
+
+$font-color: #606060;
+$title-color: #505050;
+$content-size: 50%;
+
+:root{
+  --wrapper-size: 50%;
+  --content-size: 790px;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+body{
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: $font-color;
+  background-color: #f4f5f8;
+}
+
+.main-wrapper {
+  background-color: #fff;
+  margin: 30px auto;
+  max-width: calc(var(--wrapper-size) + 300px);
+  padding: 20px 50px;
+}
+
+.page-content {
+  margin: auto;
+  max-width: var(--content-size);
+}
+
+.main-logo {
+  margin-bottom: 20px;
+}
+
+.has-cute-bottom-line::after {
+  content: '';
+  width: 100px;
+  margin: 12px auto;
+  display: block;
+  border-bottom: 1px dashed rgba(0,0,0,.15);
+}
+
+.has-centered-text {
+  text-align: center;
+}
+
+.main-nav ul {
+  padding: 0;
+  list-style: none;
+  .nav-item {
+    display: inline-block;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    color: $font-color;
+    padding: 0 10px;
+    font-size: 18 px;
+    &:hover{
+      text-decoration: underline; 
+    }
+  }
+}
+
+.posts {
+  margin: 0;
+  padding: 30px 0 0 0;
+  list-style: none;
+  .post {
+    margin-bottom: 24px;
+
+    .post-date { 
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #aaa;
+      font-weight: normal;
+    }
+    
+    .post-title {
+      margin: 0 0 10px 0;
+    }
+
+    .post-title a { 
+      text-decoration: none;
+      font-size: 36px;
+      color: $title-color;
+    }
+
+    .post-subtitle { 
+      font-size: 16px;
+      font-weight: normal;
+      color: #888;
+      margin: 0;
+    }
+
+    &::after {
+      margin-top: 24px;
+    }
+  }
+}
+
+footer {
+  padding: 20px 0 0 0;
+  .footer-wrapper {
+    width: $content-size;
+    margin: 0 auto;
+    text-align: right;
+  }
+}
+
+.clearfix { clear: both; }
+
+.post-wrapper {
+  .post-content {
+    font-size: 16pt;
+    line-height: 130%; 
+  }
+
+  .post-date{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 0;
+    font-weight: normal;
+  }
+
+  .post-title {
+    font-size: 36px;
+    margin-top: 0;
+    color: $title-color;
+  }
+}
