@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<section class="posts-container">
+<ul class="posts">
+    {% for post in site.posts %}
+    <li class="post has-cute-bottom-line">
+        <div class="post-date">{{ post.date | date_to_string }}</div>
+        <h2  class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        <h3  class="post-subtitle" >{{ post.subtitle | escape }}</h3>
+    </li>
+    {% endfor %}
+</ul>
+</section>

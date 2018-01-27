@@ -1,14 +1,14 @@
 <header class="has-centered-text has-cute-bottom-line">
     
 <div class="main-logo" >
-    <a href="{{ '/' | prepend: site.baseurl }}">
+    <a href="{{ '/' | relative_url }}">
         <img src="http://via.placeholder.com/200x150" alt="logo">
     </a>
 </div>
 
 <nav class="main-nav"><ul>
-    <li class="nav-item"><a href="{{ '/' | prepend: site.baseurl }}">Blog</a></li>
-    <li class="nav-item"><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+    <li class="nav-item"><a href="{{ '/' | relative_url }}">Blog</a></li>
+    <li class="nav-item"><a href="{{ '/about' | relative_url }}">About</a></li>
 </ul></nav>
 
 </header>
